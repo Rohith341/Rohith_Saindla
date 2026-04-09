@@ -357,6 +357,35 @@ export const projects = [
     ]
   },
   {
+    id: 3,
+    title: "Shelf Life Estimation of Fruits and Vegetables",
+    date: "Oct 2025 - Dec 2025",
+    description: "Developed an IoT-based system for predicting the shelf life of fruits and vegetables using sensor data and machine learning. Integrated multiple sensors (temperature, humidity, ethylene gas) to collect real-time environmental data. Implemented LSTM neural networks for accurate spoilage prediction, achieving 92% accuracy. Created a web dashboard for monitoring and alerts, reducing food waste by 35% in testing environments.",
+    image: "https://www.mdpi.com/sensors/sensors-22-08373/article_deploy/html/images/sensors-22-08373-g001.png",
+    tags: ["IoT", "LSTM", "Machine Learning", "Python", "Sensors", "TensorFlow", "Flask"],
+    category: "iot app",
+    domain: "IoT & Machine Learning",
+    github: "https://github.com/Rohith341/ShelfNet",
+    webapp: "https://github.com/Rohith341/ShelfNet",
+    keyFeatures: [
+      "Developed an IoT-based system using sensors to collect environmental data like temperature, humidity, and gas levels",
+      "Applied LSTM deep learning model to predict spoilage and estimate shelf life",
+      "Built a dashboard for real-time monitoring and alerts"
+    ],
+    challenges: [
+      "Lack of real-time hardware data was addressed using simulated datasets and preprocessing techniques",
+      "Improving model accuracy required hyperparameter tuning and proper data normalization"
+    ],
+    solutions: [
+      "Created realistic simulated datasets and implemented comprehensive data preprocessing",
+      "Applied hyperparameter tuning and data normalization techniques to improve model accuracy"
+    ],
+    impact: [
+      "Achieved ~92% prediction accuracy, enabling reliable spoilage detection",
+      "Helped reduce food waste by ~35% in testing scenarios"
+    ]
+  },
+  {
     id: 4,
     title: "Blockchain-Based File Sharing System",
     date: "Jul 2024 - Sep 2024",

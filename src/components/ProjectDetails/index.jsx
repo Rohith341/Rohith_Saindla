@@ -276,7 +276,7 @@ const index = ({ openModal, setOpenModal }) => {
                     {/* Key Features Section */}
                     <SectionTitle>Key Features</SectionTitle>
                     <FeatureList>
-                        {project?.features?.map((feature, index) => (
+                        {project?.keyFeatures?.map((feature, index) => (
                             <FeatureItem key={index}>{feature}</FeatureItem>
                         )) || (
                             <>
@@ -299,7 +299,22 @@ const index = ({ openModal, setOpenModal }) => {
                     {/* Challenges & Solutions */}
                     <SectionTitle>Challenges & Solutions</SectionTitle>
                     <Desc>
-                        {project?.challenges || (
+                        {project?.challenges?.length > 0 ? (
+                            <>
+                                <h4>Challenges:</h4>
+                                <ul>
+                                    {project?.challenges?.map((challenge, index) => (
+                                        <li key={index}>{challenge}</li>
+                                    ))}
+                                </ul>
+                                <h4>Solutions:</h4>
+                                <ul>
+                                    {project?.solutions?.map((solution, index) => (
+                                        <li key={index}>{solution}</li>
+                                    ))}
+                                </ul>
+                            </>
+                        ) : (
                             "This project involved overcoming various technical challenges including architecture design, performance optimization, and ensuring a seamless user experience across different devices and platforms. The solution required careful planning and iterative development to achieve the desired functionality and quality standards."
                         )}
                     </Desc>
@@ -307,7 +322,13 @@ const index = ({ openModal, setOpenModal }) => {
                     {/* Project Impact */}
                     <SectionTitle>Project Impact</SectionTitle>
                     <Desc>
-                        {project?.impact || (
+                        {project?.impact?.length > 0 ? (
+                            <ul>
+                                {project?.impact?.map((impact, index) => (
+                                    <li key={index}>{impact}</li>
+                                ))}
+                            </ul>
+                        ) : (
                             "Successfully delivered a comprehensive solution that addresses key user needs and demonstrates strong technical capabilities. The project showcases expertise in modern development practices and commitment to creating high-quality, user-centric applications."
                         )}
                     </Desc>

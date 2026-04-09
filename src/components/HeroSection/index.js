@@ -46,7 +46,7 @@ const HeroSection = () => {
                     <HeroLeftContainer id="Left">
                         <Title>Hi, I am <br /> {Bio.name}</Title>
                         <TextLoop>
-                            <b>a </b>
+                            <b> </b>
                             <Span currentColor={currentColor}>
                                 <Typewriter
                                     options={{

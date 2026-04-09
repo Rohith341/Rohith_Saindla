@@ -16,20 +16,7 @@ const Navbar = () => {
     <Nav>
       <NavbarContainer>
       <NavLogo to='/'>
-      <a 
-  href='/' 
-  style={{ 
-    display: "flex", 
-    alignItems: "center", 
-    color: "white", 
-    marginBottom: '0px', 
-    cursor: 'pointer', 
-    textDecoration: 'none' // This removes the underline
-  }}
->
   <FaLaptopCode size="1.8rem" /> <Span>Rohith Portfolio</Span>
-</a>
-
 </NavLogo>
         <MobileIcon>
           <FaBars onClick={() => {

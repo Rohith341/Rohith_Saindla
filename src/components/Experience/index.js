@@ -84,14 +84,16 @@ const index = () => {
                 </Desc>
                 <TimelineSection>
                     <Timeline>
-                        {experiences.map((experience,index) => (
-                            <TimelineItem>
-                                <TimelineSeparator>
-                                    <TimelineDot variant="outlined" color="secondary" />
-                                    {index !== experiences.length - 1 && <TimelineConnector style={{ background: '#854CE6' }} />}
+                        {experiences.map((experience, index) => (
+                            <TimelineItem key={`experience-${index}`}>
+                                <TimelineSeparator key={`separator-${index}`}>
+                                    <TimelineDot key={`dot-${index}`} variant="outlined" color="secondary" />
+                                    {index !== experiences.length - 1 && (
+                                        <TimelineConnector key={`connector-${index}`} style={{ background: '#854CE6' }} />
+                                    )}
                                 </TimelineSeparator>
-                                <TimelineContent sx={{ py: '12px', px: 2 }}>
-                                    <ExperienceCard experience={experience}/>
+                                <TimelineContent key={`content-${index}`} sx={{ py: '12px', px: 2 }}>
+                                    <ExperienceCard experience={experience} key={`card-${index}`}/>
                                 </TimelineContent>
                             </TimelineItem>
                         ))}
